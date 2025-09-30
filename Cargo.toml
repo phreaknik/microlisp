@@ -8,3 +8,7 @@ default = ["std"]
 std = []
 
 [dependencies]
+
+[[example]]
+name = "basic_usage"
+path = "examples/basic_usage.rs"
