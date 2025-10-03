@@ -9,7 +9,22 @@ A minimal Lisp interpreter library written in Rust with no-std support.
 - Variable bindings with lexical scoping
 - `no_std` compatible (with `alloc`)
 
+## Documentation
+
+Detailed documentation, including a description of the instruction set can be
+found in [doc/](doc/).
+
 ## Examples
+
+You can find detailed examples in [examples](examples/). Run them with:
+```rust
+cargo run --example basic_usage
+```
+
+The test vectors in the codebase also make a great reference for how each
+method should behave.
+
+Below are some quick code snippets for illustrative purposes.
 
 Parse and evaluate a simple expression:
 ```rust
@@ -44,12 +59,3 @@ env.parse_eval("(dotimes [i 5] (def sum (+ sum i)))")?;
 let result = env.parse_eval("(+ sum 0)")?; // Note: direct variable access needs expression context
 println!("(dotimes [i 5] (def sum (+ sum i))) = {}", result);
 ```
-
-More examples in /examples. e.g:
-```rust
-cargo run --example basic_usage
-```
-
-## License
-
-See [LICENSE](LICENSE) file.
